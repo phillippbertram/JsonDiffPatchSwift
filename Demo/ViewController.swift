@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     @IBAction func generateDelta(_ sender: Any) {
         let leftJson = leftTextView.text!
         let rightJson = rightTextView.text!
-        let delta = JsonDiffPatch.diff(source: leftJson, target: rightJson)
+        let delta = JsonDiffPatch.delta(source: leftJson, target: rightJson)
         
         deltaTextView.text = delta.jsonString
     }

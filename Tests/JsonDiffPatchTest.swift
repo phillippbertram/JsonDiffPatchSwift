@@ -63,7 +63,7 @@ class JsonDiffPatchSpec: QuickSpec {
                     let expected = JSON.parse(jsonString(forFileName: "expected"))
                 
                     // when
-                    let delta = JsonDiffPatch.diff(source: left, target: right)
+                    let delta = JsonDiffPatch.delta(source: left, target: right)
 
                     // then
                     expect(JSON(delta)) == expected
