@@ -17,7 +17,7 @@ public final class JsonDiffPatch {
         case FailedLoadingJavaScript
     }
     
-    /// Creates a jsondiff dependent on given json parameters
+    /// Creates a delta dependent on given json parameters
     ///
     /// - Parameters:
     ///   - source: source JSON
@@ -53,6 +53,13 @@ public final class JsonDiffPatch {
         return output
     }
     
+    
+    /// Creates delta for given json string.
+    ///
+    /// - Parameters:
+    ///   - source: source json
+    ///   - target: target json
+    /// - Returns: json dictionary
     public static func diff(source: String, target: String) -> [String: Any] {
         do {
             return try JsonDiffPatch.diffOrFail(source: source, target: target)
@@ -60,4 +67,19 @@ public final class JsonDiffPatch {
             return [:]
         }
     }
+
+}
+
+
+public extension Sequence where Iterator.Element == (key: String, value: Any) {
+
+    var jsonString: String {
+        do {
+            let data = try JSONSerialization.data(withJSONObject: self, options: .prettyPrinted)
+            return String(data: data, encoding: .utf8) ?? ""
+        } catch {
+            return ""
+        }
+    }
+    
 }
