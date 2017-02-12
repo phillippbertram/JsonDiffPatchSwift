@@ -21,7 +21,7 @@ platform :ios, '10.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'JsonDiffPatchSwift', '~> 1.0.0'
+    pod 'JsonDiffPatchSwift', '~> 0.1.0'
 end
 ```
 
@@ -37,7 +37,7 @@ Create a `Package.swift` file.
 
 ```swift
 dependencies: [
-    .Package(url: "https://github.com/PhillippBertram/JsonDiffPatchSwift.git", majorVersion: 1)
+    .Package(url: "https://github.com/PhillippBertram/JsonDiffPatchSwift.git", majorVersion: 0)
 ]
 ```
 
