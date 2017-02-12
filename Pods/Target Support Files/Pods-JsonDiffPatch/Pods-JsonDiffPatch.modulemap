@@ -1,0 +1,6 @@
+framework module Pods_JsonDiffPatch {
+  umbrella header "Pods-JsonDiffPatch-umbrella.h"
+
+  export *
+  module * { export * }
+}
