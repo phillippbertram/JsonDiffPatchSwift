@@ -11,12 +11,16 @@ import JsonDiffPatch
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var leftTextView: UITextView!
+    @IBOutlet weak var rightTextView: UITextView!
+    @IBOutlet weak var deltaTextView: UITextView!
+    
+    @IBAction func generateDelta(_ sender: Any) {
+        let leftJson = leftTextView.text!
+        let rightJson = rightTextView.text!
+        let delta = JsonDiffPatch.diff(source: leftJson, target: rightJson)
         
-        let delta = JsonDiffPatch.diff(source: "{\"age\": 3}", target: "{\"age\": 5}")
-        print("delta: \(delta)")
+        deltaTextView.text = delta.jsonString
     }
-
 }
 
