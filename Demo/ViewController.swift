@@ -1,25 +1,22 @@
 //
 //  ViewController.swift
-//  JsonDiffPatchSwift
+//  Demo
 //
-//  Created by Phillipp Bertram on 11/02/2017.
+//  Created by Phillipp Bertram on 12/02/2017.
 //  Copyright © 2017 Phillipp Bertram. All rights reserved.
 //
 
 import UIKit
+import JsonDiffPatch
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let delta = JsonDiffPatch.diff(source: "{\"age\": 3}", target: "{\"age\": 5}")
+        print("delta: \(delta)")
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 
