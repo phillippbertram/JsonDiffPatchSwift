@@ -1,6 +1,7 @@
 # JsonDiffPatchSwift
 
 [![Swift Version](https://img.shields.io/badge/Swift-3.0-F16D39.svg?style=flat)](https://developer.apple.com/swift)
+![OS](https://img.shields.io/cocoapods/p/JsonDiffPatchSwift.svg?style=flat)
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 ![Version](https://img.shields.io/cocoapods/v/JsonDiffPatchSwift.svg)
 [![License: MIT](https://img.shields.io/cocoapods/l/JsonDiffPatchSwift.svg)](https://opensource.org/licenses/MIT)
