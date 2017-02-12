@@ -1,0 +1,19 @@
+{
+  "menu": {
+    "value": [
+      "File",
+      "File 2"
+    ],
+    "popup": {
+      "menuitem": {
+        "0": {
+          "value": [
+            "New",
+            "New 2"
+          ]
+        },
+        "_t": "a"
+      }
+    }
+  }
+}
