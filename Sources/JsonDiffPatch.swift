@@ -23,7 +23,7 @@ public final class JsonDiffPatch {
     ///   - source: source JSON
     ///   - target: target JSON
     /// - Returns: json diff as dictionary
-    public static func diffOrFail(source: String, target: String) throws -> [String: Any] {
+    public static func deltaOrFail(source: String, target: String) throws -> [String: Any] {
 
         guard let context = JSContext() else {
             throw JsonDiffPatchError.CouldNotCreateJSContext
@@ -60,9 +60,9 @@ public final class JsonDiffPatch {
     ///   - source: source json
     ///   - target: target json
     /// - Returns: json dictionary
-    public static func diff(source: String, target: String) -> [String: Any] {
+    public static func delta(source: String, target: String) -> [String: Any] {
         do {
-            return try JsonDiffPatch.diffOrFail(source: source, target: target)
+            return try JsonDiffPatch.deltaOrFail(source: source, target: target)
         } catch {
             return [:]
         }
